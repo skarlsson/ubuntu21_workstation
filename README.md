@@ -9,7 +9,7 @@ cd ubuntu21_workstation-master
 ```
 
 ```
-ansible-playbook -i "localhost," -c local initial-ubuntu21.yml --ask-become-pass 
+ansible-playbook -i "localhost," -c local initial-ubuntu21.yml --ask-become-pass -u $USER
 ```
 
 ###### if you nned cuda a reboot is nessesary to load the new driver

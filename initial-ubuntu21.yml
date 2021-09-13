@@ -27,7 +27,7 @@
     - apt_repository: repo={{ item }} state=present
       with_items:
          - ppa:graphics-drivers/ppa
-     - stat: path=/etc/cloud/cloud.cfg
+    - stat: path=/etc/cloud/cloud.cfg
       register: cloud_config
     - lineinfile: 'dest=/etc/cloud/cloud.cfg state=present regexp="^preserve_hostname:" line="preserve_hostname: true"'
       when: cloud_config.stat.exists == True
